@@ -1,19 +1,15 @@
 def bubble_sort(array)
-    index = 0
-    value_holder = 0
     swapped = true
     until (swapped == false)
         swapped = false
+        index = 0
         while (index < array.length-1)
             if (array[index] > array[index+1])
-                value_holder = array[index+1]
-                array[index+1] = array[index]
-                array[index] = value_holder
+                array[index], array[index+1] = array[index+1], array[index]
                 swapped = true
             end
         index += 1
         end
-        index = 0
     end
     array
 end
